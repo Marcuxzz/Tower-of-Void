@@ -114,7 +114,6 @@
     {"id":{"name":"snd_menu","path":"sounds/snd_menu/snd_menu.yy",},},
     {"id":{"name":"snd_morte","path":"sounds/snd_morte/snd_morte.yy",},},
     {"id":{"name":"snd_passo","path":"sounds/snd_passo/snd_passo.yy",},},
-    {"id":{"name":"aaaa","path":"sprites/aaaa/aaaa.yy",},},
     {"id":{"name":"spr_almas_menu","path":"sprites/spr_almas_menu/spr_almas_menu.yy",},},
     {"id":{"name":"spr_almas","path":"sprites/spr_almas/spr_almas.yy",},},
     {"id":{"name":"spr_arma","path":"sprites/spr_arma/spr_arma.yy",},},
