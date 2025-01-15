@@ -462,7 +462,7 @@ estado = "parado";
 if place_meeting(x+hspd, y, obj_prox_level){
 	while(!place_meeting(x+sign(hspd),y,obj_prox_level)){
 		x += x + sign(hspd);
-	}
+	}//se clicar pra andar ele entra no objproxlevel, se colocar o obj solido, ele nao entra mas nao passa fase
 hspd = 0;
 estado = "parado";
 }
@@ -471,6 +471,13 @@ estado = "parado";
 //colisao vertical
 if place_meeting(x, y+vspd, obj_chao){
 	while(!place_meeting(x,y+sign(vspd),obj_chao)){
+		y = y + sign(vspd);
+	}
+vspd = 0;
+}
+
+if place_meeting(x, y+vspd, obj_prox_level){
+	while(!place_meeting(x,y+sign(vspd),obj_prox_level)){
 		y = y + sign(vspd);
 	}
 vspd = 0;
