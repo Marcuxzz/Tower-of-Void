@@ -2,6 +2,7 @@
 if (global.pause)
 {
 	image_speed = 0;
+	
 	exit;
 }
 image_speed = 1;
@@ -448,6 +449,25 @@ estado = "parado";
 }
 x = x + hspd;
 
+//colisao horizontal com loja
+if place_meeting(x+hspd, y, obj_lojacolisao){
+	while(!place_meeting(x+sign(hspd),y,obj_lojacolisao)){
+		x += x + sign(hspd);
+	}
+hspd = 0;
+estado = "parado";
+}
+
+//colisao com prox level
+if place_meeting(x+hspd, y, obj_prox_level){
+	while(!place_meeting(x+sign(hspd),y,obj_prox_level)){
+		x += x + sign(hspd);
+	}
+hspd = 0;
+estado = "parado";
+}
+//fazer uma colisao vertical com obj_lojacolisao para testar se precisa dos obj_chao(para tirar o bug
+//do boneco ficar agarrando, talvez nao seja necessario usar obj_chao e só o da loja.
 //colisao vertical
 if place_meeting(x, y+vspd, obj_chao){
 	while(!place_meeting(x,y+sign(vspd),obj_chao)){
